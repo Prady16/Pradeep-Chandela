@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script data-require="jquery@3.1.1" data-semver="3.1.1" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title>Get Valuation</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Bubblegum+Sans|Cabin+Sketch|Lato:400,400i,700,700i|Lobster+Two:400,700|Lora'">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Bubblegum+Sans|Cabin+Sketch|Lato:400,400i,700,700i|Lobster+Two:400,700|Lora">
+</head>
+<body>
+	<div class="top_head">
+ 	<div class="container">
+ 		<div class="row">
+ 			<div class="col-sm-6 for-center">
+ 				<div class="dropdown">
+                  <button onclick="myFunction()" class="dropbtn">London <i class="far fa-angle-down"></i></button>
+                    <div id="myDropdown" class="dropdown-content">
+                       <a href="#home">UK</a>
+                       <a href="#about">USA</a>
+                       <a href="#contact">French</a>
+                    </div>
+                </div>
+ 			</div>
+ 			<div class="col-sm-6">
+ 				<ul class="contacts">
+ 					<li><img src="images/msg1.png" class="img-responsive"><span>info@example.com</span></li>
+ 					<li><img src="images/call.png" class="img-responsive"><span>+1 44323456789</span></li>
+ 				</ul>
+ 			</div>
+ 		</div>
+ 	</div>
+ </div>
+ <!-- <----------------------------------------header------------------------------------------>
+<section>
+				<nav class="navbar navbar-inverse">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" id="for-togl" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" id="for-logo-img" href="index.html">
+	  <img src="images/logo.png" class="img-responsive">
+	  </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right font">
+       <li><a href="index.html"> Home</a></li>
+        <li><a href="what_we_do.html"> What We Do</a></li>
+        <li><a href="how_it_works.html"> How It Works</a></li>
+        <li><a href="pricing.html"> Pricing </a></li>
+        <li id="for-btn"> <a href="thankyou.html"><button class="get">GET STARTED</button></a></li>
+      </ul>
+     
+    </div>
+    <!-- /.navbar-collapse -->
+</nav>
+	</section>
+
+	 <!-- <----------------------------------------header-end------------------------------------------>
+<div class="gray_value">
+  <h1>Your 2 Bed home in Holborn could be earning you:<br> <span>$2,305 </span>in a <div class="custom-select" style="width:200px;">
+  <select>
+    <option value="0">Week</option>
+    <option value="1">Month</option>
+    <option value="2">Year</option>
+  </select>
+</div></h1>
+
+<div class="container">
+	<div class="row stp_images">
+		<img src="images/stp2.png" class="img-responsive">
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3 frm-one1">
+      <img src="images/logo.png" class="img-responsive">
+	<form>
+    <label>first name</label>
+   <input type="txt" name="name"> 
+   <label>last name</label>
+   <input type="txt" name="name">
+   <label>phone number</label>
+   <input type="number" name="phone">
+  </form>
+  <a href="thankyou.html">
+  <button class="sbmt_call">book a call</button></a>
+		</div>
+	</div>
+</div>
+</div>
+<div class="container">
+  <div class="row">
+    <p class="tnc">copyright © 2019 All Rights Reserved.     <a href=""><span>Terms</span></a>    <a href=""><span>Privacy</span></a></p>
+  </div>
+</div>
+
+<script type="text/javascript">
+	  /*<------------------------------------------------drop form------------------------------->*/
+var x, i, j, selElmnt, a, b, c;
+/*look for any elements with the class "custom-select":*/
+x = document.getElementsByClassName("custom-select");
+for (i = 0; i < x.length; i++) {
+  selElmnt = x[i].getElementsByTagName("select")[0];
+  /*for each element, create a new DIV that will act as the selected item:*/
+  a = document.createElement("DIV");
+  a.setAttribute("class", "select-selected");
+  a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+  x[i].appendChild(a);
+  /*for each element, create a new DIV that will contain the option list:*/
+  b = document.createElement("DIV");
+  b.setAttribute("class", "select-items select-hide");
+  for (j = 1; j < selElmnt.length; j++) {
+    /*for each option in the original select element,
+    create a new DIV that will act as an option item:*/
+    c = document.createElement("DIV");
+    c.innerHTML = selElmnt.options[j].innerHTML;
+    c.addEventListener("click", function(e) {
+        /*when an item is clicked, update the original select box,
+        and the selected item:*/
+        var y, i, k, s, h;
+        s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+        h = this.parentNode.previousSibling;
+        for (i = 0; i < s.length; i++) {
+          if (s.options[i].innerHTML == this.innerHTML) {
+            s.selectedIndex = i;
+            h.innerHTML = this.innerHTML;
+            y = this.parentNode.getElementsByClassName("same-as-selected");
+            for (k = 0; k < y.length; k++) {
+              y[k].removeAttribute("class");
+            }
+            this.setAttribute("class", "same-as-selected");
+            break;
+          }
+        }
+        h.click();
+    });
+    b.appendChild(c);
+  }
+  x[i].appendChild(b);
+  a.addEventListener("click", function(e) {
+      /*when the select box is clicked, close any other select boxes,
+      and open/close the current select box:*/
+      e.stopPropagation();
+      closeAllSelect(this);
+      this.nextSibling.classList.toggle("select-hide");
+      this.classList.toggle("select-arrow-active");
+    });
+}
+function closeAllSelect(elmnt) {
+  /*a function that will close all select boxes in the document,
+  except the current select box:*/
+  var x, y, i, arrNo = [];
+  x = document.getElementsByClassName("select-items");
+  y = document.getElementsByClassName("select-selected");
+  for (i = 0; i < y.length; i++) {
+    if (elmnt == y[i]) {
+      arrNo.push(i)
+    } else {
+      y[i].classList.remove("select-arrow-active");
+    }
+  }
+  for (i = 0; i < x.length; i++) {
+    if (arrNo.indexOf(i)) {
+      x[i].classList.add("select-hide");
+    }
+  }
+}
+/*if the user clicks anywhere outside the select box,
+then close all select boxes:*/
+document.addEventListener("click", closeAllSelect);
+
+
+
+/*<------------------------------------------------drop form end------------------------------->*/
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+ <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
